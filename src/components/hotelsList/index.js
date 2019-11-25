@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react';
 import { observer } from 'mobx-react';
 import _ from 'lodash'
 import ReactList from 'react-list';
-import './main.css'
 import Modal from 'react-modal';
 
 import HotelsStore from "../../stores/hotelsStore";
@@ -28,11 +27,11 @@ const HotelsList = observer((props) => {
     const [filteredHotels, setFilteredHotels] = useState([]);
     const options = [
         {label:'Ascending',value:'asc'}, {label:'Descending',value:'desc'}
-    ]
+    ];
     const StarOptions = [
         {label:"*",value:'1'}, {label:"**",value:'2'},{label:"***",value:'3'},{label:"****",value:'4'},{label:"*****",value:'5'},
-    ]
-    //<i className="fa fa-star">
+    ];
+
     const [sortValue, setSortValue] = useState("");
     const [starValue, setStarValue] = useState("3");
     const [rangeValue, setRangeValue] = useState(null);
@@ -87,8 +86,7 @@ const HotelsList = observer((props) => {
                 <p>Comment: {review.comment}</p>
             </div>
         )
-
-    }
+    };
 
     const renderHotel = (index,key) => {
         return(
@@ -168,7 +166,7 @@ const HotelsList = observer((props) => {
                 </div>
             </div>
         )
-    }
+    };
 
     return(
         <div>
@@ -184,13 +182,11 @@ const HotelsList = observer((props) => {
                             style={customStyles}
                             contentLabel="Example Modal"
                         >
-
                             <h2 >Reviews for {_.get(_.find(filteredHotels,{id:selectedId}),'name')}</h2>
                             <button onClick={() =>SetModal(false)}>close</button>
                             {!_.isEmpty(HotelsStore.instance().reviews) && (
                                 <div>{_.size(_.filter(HotelsStore.instance().reviews,{positive:true}))} Positive, {_.size(_.filter(HotelsStore.instance().reviews,{positive:false}))} Negative Reviews</div>
                             )}
-
                             {_.isEmpty(HotelsStore.instance().reviews) ? "No Reviews" : _.map(HotelsStore.instance().reviews,renderReviews)}
                         </Modal>
                     </div>
@@ -220,10 +216,7 @@ const HotelsList = observer((props) => {
                         </section>
                     </div>
                 </div>
-
             }
-
-
         </div>
     )
 })
