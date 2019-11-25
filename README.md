@@ -5,6 +5,7 @@ Features:
 * Individual hotel reviews shows in a modal with number of positive and negative reviews
 * Simple test to check if hotelsList component loads
 * If API returns an error for hotels list, reload the page message is shown
+* Due to lags from lorempixel, image loader icon is implemented to show the loading process.
 
 ## To run the project
 
