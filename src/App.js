@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
+import HotelsStore from "./stores/hotelsStore";
+import HotelsList from './components/hotelsList'
 
-function App() {
+const App = () => {
+
+
+  // Initial load get all the hotels with 3 stars
+  useEffect(() => {
+    HotelsStore.instance().loadHotelsList("?min_stars=3");
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <HotelsList/>
+      </div>
   );
-}
+};
 
 export default App;

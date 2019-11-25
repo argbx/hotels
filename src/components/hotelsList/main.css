@@ -1,0 +1,110 @@
+$background-color: #d6d6d6;
+$hotel-box-background: #e7e7e7;
+$primary-color: #02b875;
+$secondary-color: #FF4943;
+$tertiary-color: #FFBF64;
+
+   .no-pad {
+     padding: 0 !important;
+   }
+
+.positive {
+  color: $primary-color;
+}
+
+.negative {
+  color: $secondary-color;
+}
+
+   body {
+     background-color: $background-color;
+
+main {
+  margin: 30px 0;
+
+.load_hotels {
+  padding-top: 5%;
+
+.h_loader {
+  background-color: $primary-color;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  padding: 2% 6%;
+}
+}
+
+.hotel_list {
+  padding-top: 5%;
+
+.hotelBox {
+  background-color: $hotel-box-background;
+  position: relative;
+  display: inline-block;
+  margin: 1% 10%;
+  min-width: 936px;
+
+.hotel_details {
+  padding: 20px 20px 0;
+
+.h_rating {
+  font-size: 24px;
+
+.fa-star {
+  color: $tertiary-color;
+}
+}
+
+.h_name {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.h_description {
+  min-height: 60px;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.h_price {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.load_reviews {
+  background-color: #2196F3;
+  color: #fff;
+  margin-top: 10px;
+}
+}
+
+.reviewBox {
+  background-color: #c5c5c5;
+  border-top: 1px solid #BFCCB8;
+  position: relative;
+  padding: 2%;
+
+.c_type {
+  font-size: 34px;
+}
+
+.commenter {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.comment {
+  font-size: 13px;
+  padding-top: 5px;
+}
+}
+}
+
+.errorBox {
+  background-color: $secondary-color;
+  color: #fff;
+  border-color: $secondary-color;
+}
+}
+}
+}
